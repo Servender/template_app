@@ -1,0 +1,20 @@
+{
+	"parser": "babel-eslint",
+	"plugins": [],
+	"env": {
+		"browser": true,
+		"es6": true,
+		"es2017": true,
+		"es2020": true
+	},
+	"rules": {
+		"no-async-promise-executor": "error",
+		"getter-return": ["error", { "allowImplicit": true }],
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"packageDir": "./"
+			}
+		]
+	}
+}

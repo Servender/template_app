@@ -1,0 +1,33 @@
+refresh_rate: 30 seconds
+appenders:
+  stdout:
+    kind: console
+  logfile:
+    kind: file
+    path: "log/request.log"
+    encoder:
+      pattern: "[{d(%Y-%m-%d %H:%M:%S %Z)(utc)}][{h({l})}][{M}] - {m}{n}"
+root:
+  level: info
+  appenders:
+    - stdout
+    - logfile
+loggers:
+  store:
+    level: trace
+    appenders:
+      - stdout
+      - logfile
+    additive: false
+  actix_server:
+    level: info
+    appenders:
+      - stdout
+      - logfile
+    additive: false
+  actix_web:
+    level: info
+    appenders:
+      - stdout
+      - logfile
+    additive: false

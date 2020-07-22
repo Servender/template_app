@@ -1,0 +1,15 @@
+[db]
+host = "localhost"
+port = 5432
+db_name = "database"
+user = "postgres"
+pass = "password"
+pool_size = 10
+
+[server]
+host = "localhost"
+port = 8081
+
+[redis]
+host = "127.0.0.1"
+port = 6379

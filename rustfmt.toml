@@ -1,0 +1,8 @@
+# See more at https://rust-lang.github.io/rustfmt/?version=master&search=
+# Run `cargo fmt`
+
+max_width = 80
+merge_derives = false
+tab_spaces = 4
+use_field_init_shorthand = true
+edition = "2018"

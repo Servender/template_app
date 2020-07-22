@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+        | {% if page.header.title %}
+        title.
+            {{ page.header.title }}
+        | {% else %}
+        title ServOS
+        | {% endif %}
+
+        | {% if page.header.styles %}
+        | {% for style in page.header.styles %}
+        link(rel="stylesheet" href="{{ style }}")
+        | {% endfor %}
+        | {% endif %}
+
+        | {% if page.header.scripts  %}
+        | {% for script in page.header.scripts  %}
+        script(src="{{ script }}")
+        | {% endfor %}
+        | {% endif %}
+
+    body
+        #__servenderApp__
+
+        | {% if page.footer.scripts  %}
+        | {% for script in page.footer.scripts  %}
+        script(src="{{ script }}")
+        | {% endfor %}
+        | {% endif %}

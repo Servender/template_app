@@ -1,0 +1,12 @@
+extends _layout
+
+block styles
+    each style in styles
+        link(rel="stylesheet", href=style)
+
+block body
+    h1 ERROR 400!
+    
+block scripts
+    each script in scripts
+        script(src=script)
